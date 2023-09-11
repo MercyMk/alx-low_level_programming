@@ -1,11 +1,8 @@
-#include <stdlib.h>
-#include <time.h>
 #include<stdio.h>
 /**
- * main - prints all possible different combinations of these digits
+ * main - Entry point
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int ones = '0';
@@ -18,7 +15,8 @@ int main(void)
 		{
 			for (ones = '0'; ones <= '9'; ones++)
 			{
-				if (!((ones == tens || tens == hundreds) || (tens > ones) || (hundreds > tens)))
+				if (!((ones == tens || tens == hundreds) ||
+							(tens > ones) || (hundreds > tens)))
 				{
 					putchar(hundreds);
 					putchar(tens);
